@@ -939,6 +939,86 @@ body {
 }
 
 /* ============================
+   Campaign (special view)
+   ============================ */
+.dropdown-item-special {
+    background: linear-gradient(135deg, rgba(232, 121, 249, 0.25), rgba(240, 171, 252, 0.15));
+    border: 1px solid rgba(232, 121, 249, 0.4);
+    color: var(--pink-accent);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 6px;
+}
+
+.dropdown-item-special:hover {
+    background: linear-gradient(135deg, var(--rose), var(--purple));
+    color: var(--white);
+}
+
+.cycle-card-special {
+    background: linear-gradient(135deg, rgba(232, 121, 249, 0.4), rgba(124, 58, 237, 0.3));
+    border: 2px solid rgba(232, 121, 249, 0.45);
+    grid-column: 1 / -1;
+    max-width: 320px;
+    margin: 10px auto 0;
+    position: relative;
+}
+
+.cycle-card-special::after {
+    content: '✨';
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 1.2rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.cycle-card-special .cycle-num {
+    font-size: 2.6rem;
+    background: linear-gradient(135deg, var(--rose), var(--pink-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: heartbeat 1.6s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25%      { transform: scale(1.15); }
+    40%      { transform: scale(1); }
+    60%      { transform: scale(1.15); }
+}
+
+.campaign-badge {
+    background: linear-gradient(135deg, var(--rose), var(--pink-accent)) !important;
+    box-shadow: 0 6px 24px rgba(232, 121, 249, 0.6) !important;
+    animation: glowBadge 3s ease-in-out infinite;
+}
+
+@keyframes glowBadge {
+    0%, 100% { box-shadow: 0 6px 24px rgba(232, 121, 249, 0.6); }
+    50%      { box-shadow: 0 8px 34px rgba(232, 121, 249, 1); }
+}
+
+.campaign-description {
+    background: linear-gradient(135deg, rgba(232, 121, 249, 0.3), rgba(124, 58, 237, 0.4), rgba(240, 171, 252, 0.25));
+    border: 2px solid rgba(240, 171, 252, 0.5);
+}
+
+.campaign-view .cycle-header h2 {
+    background: linear-gradient(135deg, var(--white), var(--pink-accent), var(--rose), var(--pink-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0%, 100% { filter: brightness(1); }
+    50%      { filter: brightness(1.2); }
+}
+
+/* ============================
    Lightbox
    ============================ */
 .lightbox {
